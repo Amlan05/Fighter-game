@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>AMLAN_WWE_FIGHT</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="wwe">
+    <img id="wwe" src="IMG/WWE_Logo.png" >
+  </div>
+  <br>
+  <div class="menu">
+    <div class="p1Info">
+
+      <div id="p1Name">Player 1</div>
+
+      <img id="p1img" src="" />
+
+      <div class="playerControls">
+
+        <div class="AttackDiv">
+          <h3>Q:</h3>
+          <button onclick="player1.strike(player1, player2)" id="attack">
+            Attack
+          </button>
+        </div>
+
+        <div class="HealDiv">
+          <h3>A:</h3>
+          <button onclick="player1.heal(player1)" id="heal">
+            Heal
+          </button>
+        </div>
+      </div>
+
+      <div id="p1Health">100</div>
+    </div>
+
+    <button id="play" onclick="game.play(p1,p2)">End Game</button>
+    
+
+    <div class="p2Info">
+
+      <div id="p2Name">Player 2</div>
+
+      <img id="p2img" src="" />
+      <div class="playerControls">
+        <div class="AttackDiv">
+          <h3>P:</h3>
+          <button onclick="player2.strike(player2, player1)" id="attack">
+            Attack
+          </button>
+        </div>
+        <div class="HealDiv">
+          <h3>L:</h3>
+          <button onclick="player2.heal(player2)" id="heal">
+            Heal
+          </button>
+        </div>
+      </div>
+
+      <div id="p2Health">100</div>
+    </div>
+
+  </div>
+
+  
+  <div class="resultContainer">
+      <div id="result"></div>
+      <button id="reset" onclick="game.reset(p1,p2)">Reset</button>
+  </div>
+
+
+
+  <br>
+  <div class="begin">
+
+    <div class="character1" >
+      <div style="width: 100%;display: flex;justify-content: center;align-items: center; flex-direction: column;">
+      <input type="button" value="Choose Character1" class="toggle1">
+      <div style="display: flex; justify-content: center;">
+      <ul class="char1">
+        <li class="play1">JOHN CENA</li>
+        <li class="play1">BROCK LESNER</li>
+        <li class="play1">UNDER TAKER</li>
+        <li class="play1">KANE</li>
+        <li class="play1">ROMAN REIGNS</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+    <div class="start">
+
+      <div style="width: 100%;display: flex;justify-content: center;align-items: center; flex-direction: column;">
+        <input type="button" value="Choose Event" class="toggleMid">
+        <div style="display: flex; justify-content: center;">
+        <ul class="Evt">
+          <li class="Evt1">EXTREME RULES</li>
+          <li class="Evt1">ROYAL RUMBLE</li>
+          <li class="Evt1">SUMMER SLAM</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+    <div class="character2">
+      <div style="width: 100%;display: flex;justify-content: center;align-items: center; flex-direction: column;">
+      <input type="button" value="Choose Character2" class="toggle2">
+      <div style="display: flex; justify-content: center;">
+      <ul class="char2">
+        <li class="play2">JOHN CENA</li>
+        <li class="play2">BROCK LESNER</li>
+        <li class="play2">UNDER TAKER</li>
+        <li class="play2">KANE</li>
+        <li class="play2">ROMAN REIGNS</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </div>
+<br>
+  <div class="beginContainer">
+    <div class="nochar"></div>
+    <button id="start" >Start Game</button>
+</div>
+
+
+
+
+  <audio id="p1attack" controls style="display:none">
+    <source src="sounds/fastpunch.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="p1heal" controls style="display:none">
+    <source src="sounds/fastheal.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="p2attack" controls style="display:none">
+    <source src="sounds/quickhit.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="p2heal" controls style="display:none">
+    <source src="sounds/quickheal.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+<audio id="victory" controls style="display:none">
+  <source src="sounds/victory.mp3" type="audio/mpeg">
+</audio>
+
+</html>
